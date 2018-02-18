@@ -115,7 +115,6 @@ function rsModalOpen(openLink) {
 var rsTargetModalClose;
 
 function rsModalClose(closeLink, callback) {
-  console.log('closing modal');
   var rsTargetModalCloseId = closeLink.dataset.modalId;
   rsTargetModalClose = document.getElementById(rsTargetModalCloseId);
   
@@ -179,24 +178,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-
-// function initRSEventAdd() {
-//   var rsEventAddButton = document.querySelector('.js-event-add');
-//   rsEventAddButton.addEventListener('click', function(el) {
-//     el.preventDefault();
-//     rsModalOpen(el);
-//   });
-// }
-
-// function rsInitMusicAdd() {
-//   var rsMusicAddButton = document.querySelector('.js-modal-event-button-music-add');
-//   rsMusicAddButton.addEventListener('click', function(el) {
-//     el.preventDefault();
-//     rsModalOpen(el);
-//     // var targetModalId = openLink.dataset.modalId;
-//     // var targetModal = document.getElementById(targetModalId);
-//   });
-// }
 
 function rsInitResound() {
   Object(__WEBPACK_IMPORTED_MODULE_2__events_js__["a" /* default */])();
