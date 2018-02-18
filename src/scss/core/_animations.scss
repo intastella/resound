@@ -1,0 +1,26 @@
+$xshort-duration: 0.1s;
+$short-duration: 0.15s;
+$medium-duration: 0.25s;
+$long-duration: 0.5s;
+$xlong-duration: 0.75s;
+$xxlong-duration: 1s;
+$default-duration: $medium-duration;
+$default-timing: ease-in-out;
+$default-transition: $default-duration $default-timing;
+$short-transition: $short-duration $default-timing;
+$ease-in-to-bounce-back: cubic-bezier(0.68, 0, 0.265, 1.55);
+$bounce-back-to-ease-out: cubic-bezier(0.68, -0.55, 0.265, 0);
+
+@mixin animation-spin {
+  @include inline-block; // Required for Firefox
+  will-change: transform;
+  animation: spin 1s infinite linear $xshort-duration; 
+}
+
+@mixin arrow-pointing-down {
+  animation-name: arrow-pointing-down;
+	animation-delay: 2s;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: $default-timing;
+}

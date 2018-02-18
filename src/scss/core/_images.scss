@@ -1,0 +1,30 @@
+// =============================================
+//							     IMAGES
+// =============================================
+
+@mixin image-hidpi($image, $type, $width, $height, $xxx:null, $importance: null) {
+  width: $width;
+  height: $height;
+  background-image: url('#{$image-path}' + $image + '.' + $type) $importance;
+  background-size: $width $height;
+
+  @include breakpoint($xxdpi) {
+    background-image: url('#{$image-path}' + $image + '@2x.' + $type) $importance;
+  }
+  
+  @if ($xxx) {
+    @include breakpoint($xxxdpi) {
+      background-image: url('#{$image-path}' + $image + '@3x.' + $type) $importance;
+    }
+  }
+}
+
+@mixin image-fit-vertical {
+  @include full-height;
+  width: auto;
+}
+
+@mixin image-fixed-size {
+  width: auto;
+  height: auto;
+}

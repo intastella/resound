@@ -1,0 +1,32 @@
+// =============================================
+//							 	 FONT WEIGHTS
+// =============================================
+
+html, 
+body {
+	@include font-weight($page-font-weight);
+}
+
+body {
+	text-rendering: optimizeLegibility;
+	font-synthesis: none;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+	@include font-weight($heading-font-weight);
+}
+
+b, 
+strong {
+	@include font-weight($bold-font-weight);
+}
+
+i, 
+em {
+	@include font-italic;
+}

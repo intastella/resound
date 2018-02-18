@@ -1,0 +1,288 @@
+// =============================================
+//							 	 FONT WEIGHTS
+// =============================================
+
+@mixin font-weight($font-weight) {
+  @if $font-weight-type == 'digit' {
+    font-weight: $font-weight;
+  }
+	@if $font-weight-type == 'family' {
+    font-family: $font-weight;
+    font-weight: normal;
+  }
+}
+
+@mixin font-black {
+  @if $font-weight-type == 'digit' {
+    font-weight: $font-black;
+  }
+	@if $font-weight-type == 'family' {
+    font-family: $font-black;
+    font-weight: normal;
+  }
+}
+
+@mixin font-semi-bold {
+	@if $font-weight-type == 'digit' {
+    font-weight: $font-semi-bold;
+  }
+	@if $font-weight-type == 'family' {
+    font-family: $font-semi-bold;
+    font-weight: normal;
+  }
+}
+
+@mixin font-bold {
+	@if $font-weight-type == 'digit' {
+    font-weight: $font-bold;
+  }
+	@if $font-weight-type == 'family' {
+    font-family: $font-bold;
+    font-weight: normal;
+  }
+}
+ 
+@mixin font-medium {
+	@if $font-weight-type == 'digit' {
+    font-weight: $font-medium;
+  }
+	@if $font-weight-type == 'family' {
+    font-family: $font-medium;
+    font-weight: normal;
+  }
+}
+
+@mixin font-regular {
+	@if $font-weight-type == 'digit' {
+    font-weight: $font-regular;
+  }
+	@if font-weight-type == 'family' {
+    font-family: $font-regular;
+    font-weight: normal;
+  }
+}
+
+@mixin font-light {
+	@if $font-weight-type == 'digit' {
+    font-weight: $font-light;
+  }
+	@if $font-weight-type == 'family' {
+    font-family: $font-light;
+    font-weight: normal;
+  }
+}
+
+@mixin font-italic {
+	font-style: italic;
+}
+
+// =============================================
+//							    TYPE STYLES
+// =============================================
+
+@mixin type-uppercase {
+	text-transform: uppercase;
+}
+
+@mixin type-transform-none {
+	text-transform: none;
+}
+
+@mixin type-sm-caps {
+	@include type-uppercase;
+	letter-spacing: 0.1em;
+}
+
+@mixin type-no-wrap {
+	white-space: nowrap;
+}
+
+@mixin type-align-right { 
+  text-align: right; 
+}
+
+@mixin type-align-left { 
+  text-align: left; 
+}
+
+@mixin type-align-center { 
+  text-align: center; 
+}
+
+@mixin type-truncate { 
+  overflow: hidden; 
+  white-space: nowrap; 
+  text-overflow: ellipsis; 
+}
+
+@mixin type-force-wrap {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+@mixin type-vertical-top { 
+  vertical-align: top; 
+}
+
+@mixin type-vertical-middle { 
+  vertical-align: middle; 
+}
+
+@mixin type-vertical-bottom { 
+  vertical-align: bottom; 
+}
+
+// =============================================
+//							     TYPE SIZES
+// =============================================
+
+$type-60: 3.75em; 	//60px
+$type-48: 3em; 			//48px
+$type-36: 2.25em; 	//36px 
+$type-32: 2em; 			//32px 
+$type-30: 1.875em; 	//30px 
+$type-26: 1.625em; 	//26px 
+$type-24: 1.5em; 		//24px 
+$type-22: 1.375em; 	//22px 
+$type-18: 1.125em; 	//18px 
+$type-16: 1em; 			//16px 
+$type-15: 0.9375em; //15px 
+$type-14: 0.875em; 	//14px 
+$type-13: 0.8125em; //13px
+$type-12: 0.75em; 	//12px 
+$type-11: 0.6875em; //11px 
+$type-10: 0.625em;  //10px 
+
+@mixin type-xxxxlarge($breakpoint: null) {
+  $breakpoint-large: $large;
+  @if $breakpoint {
+    $breakpoint-large: $breakpoint;
+  }
+	font-size: $type-48; //32px 
+	line-height: 1; //32px
+	
+	@include breakpoint($breakpoint-large) {
+		font-size: $type-60; //60px
+	}
+}
+
+@mixin type-xxxlarge($breakpoint: null) {
+  $breakpoint-large: $large;
+  @if $breakpoint {
+    $breakpoint-large: $breakpoint;
+  }
+	font-size: $type-32; //32px 
+	line-height: 1; //32px
+	
+	@include breakpoint($breakpoint-large) {
+		font-size: $type-48; //48px
+	}
+}
+
+@mixin type-xxlarge($breakpoint: null) {
+  $breakpoint-large: $large;
+  @if $breakpoint {
+    $breakpoint-large: $breakpoint;
+  }
+	font-size: $type-26; //26px
+	line-height: 1.153846154; //30px
+	
+	@include breakpoint($breakpoint-large) {
+		font-size: $type-36; //36px
+		line-height: 1.166666667; //42px
+	}
+}
+
+@mixin type-xlarge($breakpoint: null) {
+  $breakpoint-large: $large;
+  @if $breakpoint {
+    $breakpoint-large: $breakpoint;
+  }
+	font-size: $type-22; //22px
+	line-height: 1.272727273; //28px
+	
+	@include breakpoint($breakpoint-large) {
+		font-size: $type-30; //30px
+    line-height: 1.2; //36px
+	}
+}
+
+@mixin type-large($breakpoint: null) {
+  $breakpoint-large: $large;
+  @if $breakpoint {
+    $breakpoint-large: $breakpoint;
+  }
+	font-size: $type-18; //18px
+	line-height: 1.222222222; //22px
+	
+	@include breakpoint($breakpoint-large) {
+		font-size: $type-24; //24px
+		line-height: 1.333333333; //32px
+	}
+}
+
+@mixin type-medium($breakpoint: null) {
+  $breakpoint-large: $large;
+  @if $breakpoint {
+    $breakpoint-large: $breakpoint;
+  }
+  @include type-default;
+}
+
+@mixin type-default($line-height-sm: 1.5, $line-height-lg: 1.666666667) {
+	font-size: $type-16; //default base font size 16px
+	line-height: $line-height-sm; //default base line-height 24px
+	
+	@include breakpoint($large) {
+		font-size: $type-18; //18px
+		line-height: $line-height-lg; //30px
+	}
+}
+
+@mixin type-subheading {
+	@include type-default(1.3, 1.4);
+}
+
+@mixin type-small($breakpoint: null) {
+  $breakpoint-large: $large;
+  @if $breakpoint {
+    $breakpoint-large: $breakpoint;
+  }
+	font-size: $type-14; //14px
+	line-height: 1.428571429; //20px
+	
+	@include breakpoint($breakpoint-large) {
+		font-size: $type-16; //16px
+		line-height: 1.5; //24px
+	}
+}
+
+@mixin type-xsmall($breakpoint: null) {
+  $breakpoint-large: $large;
+  @if $breakpoint {
+    $breakpoint-large: $breakpoint;
+  }
+	font-size: $type-12; //12px
+	line-height: 1.333333333; //16px
+	
+	@include breakpoint($breakpoint-large) {
+		font-size: $type-14; //14px
+		line-height: 1.285714286; //18px
+	}
+}
+
+@mixin type-xxsmall($breakpoint: null) {
+  $breakpoint-large: $large;
+  @if $breakpoint {
+    $breakpoint-large: $breakpoint;
+  }
+	font-size: $type-11; //11px
+	line-height: 1.272727273; //14px
+	
+	@include breakpoint($breakpoint-large) {
+		font-size: $type-12; //12px
+		line-height: 1.333333333; //16px
+	}
+}

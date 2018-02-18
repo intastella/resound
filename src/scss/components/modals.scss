@@ -1,0 +1,413 @@
+@mixin modal-input-style {
+  @include full-width;
+  @include gap-bottom-small;
+  padding: $gutter 0;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.modal-bg {
+  @include fixed;
+  @include full-width;
+  @include full-height;
+  @include hidden;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 9994;
+  
+  .modal--open + & {
+    @include block;
+  }
+}
+
+.modal {
+  @include fixed;
+  @include hidden;
+  @include flex-vertical;
+  @include full-width;
+  @include full-height;
+  top: 0;
+  right: 0;
+  transition: transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  transform: translate(0, 100%);
+  background: $white;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
+  transform-origin: 50% 50%;
+  z-index: 9995;
+  
+  @include breakpoint($medium) {
+    width: 30em;
+		transform: translate(100%, 0);
+    border-left: 4px solid #5DBDCD;
+	}
+  
+  &--open {
+    @include flex;
+    will-change: transform;
+  }
+  
+  &--visible {
+    transform: translate(0, 0);
+  }
+  
+  &--closed {
+    transform: translate(0, 100%);
+    
+    @include breakpoint($medium) {
+  		transform: translate(100%, 0);
+  	}
+  }
+}
+
+.modal__header {
+  @include flex;
+  @include flex-cross-center;
+  @include full-width;
+  height: $header-size-small;
+  justify-content: space-between;
+  background-image: linear-gradient(135deg, #5DBDCE 0%, #5DCE7C 100%);
+  
+  @include breakpoint($medium) {
+		height: $header-size-large;
+	}
+}
+
+.modal__header-title {
+  @include gap-left-small;
+  @include type-color-white;
+  @include font-bold;
+  font-size: $type-24;
+}
+
+.modal__close {
+  @include relative;
+  @include type-color-white;
+  @include flex;
+  @include flex-cross-center;
+  @include gap-right-xsmall;
+  justify-content: center;
+  top: -0.1em;
+  width: 2.5em;
+  height: 2.5em;
+  transition: transform 0.15s ease-in-out;
+  
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.modal__content {
+  @include pad-left-small;
+  @include pad-right-small;
+  @include pad-bottom-large;
+  
+  @include breakpoint($medium) {
+    @include pad-left-medium;
+    @include pad-right-medium;
+	}
+}
+
+.modal__event-image {
+  @include center;
+  @include block;
+  @include gap-top-medium;
+  @include event-box;
+  @include flex;
+  @include flex-main-center;
+  @include flex-cross-center;
+  @include square(5em);
+  transition: transform 0.15s ease-in-out;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+  
+  @include breakpoint($medium) {
+    @include square(7.5em);
+	}
+}
+
+.modal__event-image-label {
+  @include font-medium;
+  @include type-align-center;
+  margin-top: 0.2em;
+  font-size: $type-12;
+  color: #B3B3B3;
+}
+
+.modal__event-form {
+  @include gap-top-xsmall;
+  
+  @include breakpoint($medium) {
+    @include gap-top-small;
+	}
+}
+
+.modal__event-input {
+  @include modal-input-style;
+  font-size: $type-24;
+  
+  &::placeholder {
+		color: #B3B3B3;
+	}
+  
+  &:focus {
+  	outline: none;
+	}
+}
+
+.modal__event-music {
+  @include modal-input-style;
+  @include flex;
+  @include flex-cross-center;
+  justify-content: space-between;
+}
+
+.modal__event-music-label {
+  font-size: $type-24;
+  color: #B3B3B3;
+}
+
+.modal__event-music-buttons {
+  @include flex;
+}
+
+.modal__event-music-button {
+  @include flex;
+  @include flex-cross-center;
+  width: 2em;
+  height: 2.5em;
+  justify-content: center;
+  transition: transform 0.15s ease-in-out;
+  
+  &:hover {
+    transform: scale(1.3);
+  }
+  
+  &--remove {
+    @include hidden;
+  }
+}
+
+.modal__event-music-button-icon--add {
+  @include relative;
+  width: 18px;
+  height: 19px;
+  top: -0.05em;
+}
+
+.modal__footer {
+  @include fixed;
+  @include full-width;
+  @include bg-color-white;
+  bottom: 0;
+  left: 0;
+  padding: $gutter $gutter-double;
+  border-top: 1px solid #D9D9D9;
+  box-shadow: 0 -1px 8px 0 rgba(0, 0, 0, 0.15);
+  
+  @include breakpoint($medium) {
+    padding: $gutter $gutter-triple;
+	}
+}
+
+.modal__footer-button {
+  @include full-width;
+  @include center;
+  @include block;
+  @include font-medium;
+  @include type-color-white;
+  @include type-align-center;
+  background: #4B4B4B;
+  height: 2.5em;
+  
+  @include breakpoint($medium) {
+    max-width: 20em;
+	}
+}
+
+.modal__music-overlay-bg {
+  @include fixed;
+  @include full-width;
+  @include full-height;
+  @include hidden;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.7);
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+  z-index: 9996;
+  
+  .modal--open + & {
+    @include block;
+    will-change: opacity;
+  }
+  
+  .modal--visible + & {
+    opacity: 1;
+  }
+  
+  .modal--closed + & {
+    opacity: 0;
+  }
+}
+
+.modal__music-overlay {
+  @include fixed;
+  @include bg-color-white;
+  @include flex-vertical;
+  @include hidden;
+  top: 50%;
+  left: 50%;
+  width: 17.5em;
+  height: 20em;
+  margin-top: -(10em);
+  margin-left: -8.75em;
+  border: 1px solid #D9D9D9;
+  border-radius: 6px;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transform: translateY(-2em);
+  transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+  z-index: 9997;
+  
+  &.modal--open {
+    @include flex;
+  }
+  
+  &.modal--visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  &.modal--closed {
+    opacity: 0;
+    transform: translateY(2em);
+  }
+}
+
+.modal__music-overlay-header {
+  @include flex-fixed;
+  padding: 0 14px;
+}
+
+.modal__music-overlay-header-inner {
+  @include flex;
+  @include flex-cross-center;
+  @include full-width;
+  justify-content: space-between;
+  border-bottom: 1px solid #E0E0E0;
+  padding: 14px 0;
+}
+
+.modal__music-overlay-header-title {
+  font-size: $type-18;
+}
+
+.modal__music-overlay-close {
+  @include type-color-primary;
+  width: 2em;
+  font-size: $type-13;
+  transition: transform 0.15s ease-in-out;
+  
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.modal__music-overlay-close-icon {
+  @include icon;
+}
+
+.modal__music-overlay-content {
+  @include flex-fluid;
+  @include flex;
+  @include flex-vertical;
+  padding: $gutter-double 14px;
+}
+
+.modal__music-overlay-content-page {
+  @include flex;
+  @include flex-vertical;
+  @include flex-fluid;
+  
+  &--albums {
+    @include hidden;
+  }
+}
+
+.modal__music-overlay-search-input {
+  @include flex-fixed;
+  @include full-width;
+  @include round;
+  padding: 0.25em 1em;
+  background: #F3F3F3;
+  border: 1px solid #D9D9D9;
+  font-size: $type-18;
+  color: #989898;
+  
+  &:focus {
+  	outline: none;
+	}
+  
+  &::selection {
+    @include type-color-white;
+    background: $primary-color;
+  }
+}
+
+.modal__music-overlay-search-message {
+  @include flex-fluid;
+  @include flex;
+  @include flex-cross-center;
+  @include font-medium;
+  @include type-align-center;
+  justify-content: center;
+  color: #9A9A9A;
+  
+  &--off {
+    @include hidden;
+  }
+}
+
+.modal__music-overlay-search-results {
+  @include flex-fluid;
+  @include flex-vertical;
+  @include hidden;
+  
+  &--on {
+    @include flex;
+  }
+}
+
+.modal__music-overlay-search-results-header {
+  @include flex-fixed;
+  @include padded(1);
+  @include font-bold;
+  @include type-uppercase;
+  font-size: $type-10;
+  color: #9A9A9A;
+}
+
+.modal__music-overlay-search-results-list {
+  @include gap-bottom-zero;
+  @include flex-fluid;
+  @include overflow-x-hidden-scroll-y;
+}
+
+.modal__music-overlay-search-results-list-item {
+  @include font-medium;
+  margin-bottom: 0.5em;
+  padding: 0 0.5em 0.5em;
+  font-size: $type-18;
+  border-bottom: 1px solid #E0E0E0;
+  color: $primary-text-color;
+  transition: color 0.15s ease-in-out;
+  cursor: pointer;
+  
+  &:hover {
+    color: $link-color;
+  }
+}
+

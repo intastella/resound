@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="translucent black">
+    <title>Resound</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="dist/css/resound.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script> -->
+    <script src="dist/js/resound.js"></script>
+  </head>
+</html>
+<body>
+  <header class="page-header">
+    <div class="page-header__inner">
+      <a href="/home" class="page-header__logo"></a>
+      <a href="#" class="page-header__user">
+        <img src="dist/img/user-photo.jpg" alt="User photo">
+      </a>
+    </div>
+  </header>
+  <main class="page-main" role="main">
+    <h1 class="event-heading js-event-heading">Events</h1>
+    <div class="event-container">
+      <button class="event js-event">
+        <img src="dist/img/event-photo1.jpg" alt="LCD Soundsystem photo">
+        <div class="event__overlay">
+          <div class="event__detail">
+            <h2 class="event__detail-name">LCD Soundsystem</h2>
+            <div class="event__detail-location">Hollywood Palladium</div>
+          </div>
+          <div class="event__date">
+            <div class="event__date-month">Feb</div>
+            <div class="event__date-day">16</div>
+          </div>
+        </div>
+      </button>
+      
+      <button class="event js-event">
+        <img src="dist/img/event-photo2.jpg" alt="Tycho photo">
+        <div class="event__overlay">
+          <div class="event__detail">
+            <h2 class="event__detail-name">Tycho</h2>
+            <div class="event__detail-location">The Echo</div>
+          </div>
+          <div class="event__date">
+            <div class="event__date-month">Feb</div>
+            <div class="event__date-day">23</div>
+          </div>
+        </div>
+      </button>
+      
+      <button class="event js-event">
+        <img src="dist/img/event-photo3.jpg" alt="Phantogram photo">
+        <div class="event__overlay">
+          <div class="event__detail">
+            <h2 class="event__detail-name">Phantogram</h2>
+            <div class="event__detail-location">Hollywood Forever</div>
+          </div>
+          <div class="event__date">
+            <div class="event__date-month">Mar</div>
+            <div class="event__date-day">2</div>
+          </div>
+        </div>
+      </button>
+      
+      <button class="event event--add js-event js-modal-open" data-modal-id="modal-add-event">
+        <svg class="event__icon-add"width="23" height="25" viewBox="0 0 23 25" xmlns="http://www.w3.org/2000/svg"><path d="M22.92 10.928v3.024h-9.36v10.152h-3.312V13.952H.816v-3.024h9.432V.776h3.312v10.152z" fill="#5DCE7C" fill-rule="evenodd"/></svg>
+      </button>
+    </div>
+  </main>
+  <div class="modal js-modal" id="modal-add-event">
+    <header class="modal__header">
+      <div class="modal__header-title">Add Event</div>
+      <button class="modal__close js-modal-close" data-modal-id="modal-add-event" aria-label="Close modal">
+        <svg  class="modal__close-icon" aria-hidden="true" width="17" height="17" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg"><path d="M10.904 8.5l5.598 5.598c.664.664.664 1.74 0 2.403a1.698 1.698 0 0 1-2.404 0c-.262-.26-5.598-5.597-5.598-5.597L2.902 16.5a1.698 1.698 0 0 1-2.404 0 1.698 1.698 0 0 1 0-2.403L6.096 8.5.498 2.902A1.698 1.698 0 0 1 .498.5a1.698 1.698 0 0 1 2.404 0C3.164.759 8.5 6.096 8.5 6.096L14.098.5a1.698 1.698 0 0 1 2.404 0c.664.664.664 1.74 0 2.403-.26.262-5.598 5.598-5.598 5.598z" fill-rule="evenodd"/></svg>
+      </button>
+    </header>
+    <div class="modal__content">
+      <div class="modal__event-image">
+        <svg class="modal__event-image-icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M18 10.586V3a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v14a1 1 0 0 0 .65.937L13.292 7.293a1 1 0 0 1 1.414 0L18 10.586zm0 2.828l-4-4L5.414 18H17a1 1 0 0 0 1-1v-3.586zM3 0h14a3 3 0 0 1 3 3v14a3 3 0 0 1-3 3H3a3 3 0 0 1-3-3V3a3 3 0 0 1 3-3zm3.5 9a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zm0-2a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z" id="a"/></defs><use fill="#E0DCDC" xlink:href="#a"/></svg>
+      </div>
+      <div class="modal__event-image-label">Add image</div>
+      <div class="modal__event-form">
+        <input type="text" class="modal__event-input" placeholder="Name" name="event-name"></input>
+        <input type="text" class="modal__event-input" placeholder="Location" name="event-location"></input>
+        <input type="text" class="modal__event-input js-input-mask-date" placeholder="Date" name="event-date"></input>
+        <input type="text" class="modal__event-input" placeholder="Time" name="event-time"></input>
+        <div class="modal__event-music">
+          <div class="modal__event-music-label">Music</div>
+          <div class="modal__event-music-buttons">
+            <button class="modal__event-music-button modal__event-music-button--remove js-modal-event-music-button-remove">
+              <svg class="modal__event-music-button-icon" width="18" height="4" viewBox="0 0 18 4" xmlns="http://www.w3.org/2000/svg"><path d="M.02 3.06V.3H17.3v2.76z" fill="#5DCE7C" fill-rule="evenodd"/></svg>
+            </button>
+            <button class="modal__event-music-button modal__event-music-button--add js-modal-open" data-modal-id="modal-add-music">
+              <svg class="modal__event-music-button-icon modal__event-music-button-icon--add" width="23" height="25" viewBox="0 0 23 25" xmlns="http://www.w3.org/2000/svg"><path d="M22.92 10.928v3.024h-9.36v10.152h-3.312V13.952H.816v-3.024h9.432V.776h3.312v10.152z" fill="#5DCE7C" fill-rule="evenodd"/></svg>
+            </button>
+          </div>
+          <div class="modal__music-overlay js-modal" id="modal-add-music">
+            <header class="modal__music-overlay-header">
+              <div class="modal__music-overlay-header-inner">
+                <div class="modal__music-overlay-header-title">Music</div>
+                <button class="modal__music-overlay-close js-modal-close js-music-overlay-close" data-modal-id="modal-add-music" aria-label="Close Music">
+                  <svg  class="modal__music-overlay-close-icon" aria-hidden="true" width="17" height="17" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg"><path d="M10.904 8.5l5.598 5.598c.664.664.664 1.74 0 2.403a1.698 1.698 0 0 1-2.404 0c-.262-.26-5.598-5.597-5.598-5.597L2.902 16.5a1.698 1.698 0 0 1-2.404 0 1.698 1.698 0 0 1 0-2.403L6.096 8.5.498 2.902A1.698 1.698 0 0 1 .498.5a1.698 1.698 0 0 1 2.404 0C3.164.759 8.5 6.096 8.5 6.096L14.098.5a1.698 1.698 0 0 1 2.404 0c.664.664.664 1.74 0 2.403-.26.262-5.598 5.598-5.598 5.598z" fill-rule="evenodd"/></svg>
+                </button>
+              </div>
+            </header>
+            <div class="modal__music-overlay-content">
+              <div class="modal__music-overlay-content-page">
+                <input type="search" class="modal__music-overlay-search-input js-music-search-input" placeholder="Search Artists" name="music-serach"></input>
+                <div class="modal__music-overlay-search-message js-music-search-message">
+                  Search to find<br>
+                  Artists and Albums
+                </div>
+                <div class="modal__music-overlay-search-results js-music-search-results">
+                  <div class="modal__music-overlay-search-results-header">Artists</div>
+                  <ul class="modal__music-overlay-search-results-list js-music-search-results-artists"></ul>
+                </div>
+              </div>
+              <div class="modal__music-overlay-content-page modal__music-overlay-content-page--albums">
+                <div class="modal__music-overlay-search-results-header">Albums</div>
+                <ul class="modal__music-overlay-search-results-list js-music-search-results-albums"></ul>
+              </div>
+            </div>
+          </div>
+          <div class="modal__music-overlay-bg"></div>
+        </div>
+      </div>
+    </div>
+    <footer class="modal__footer">
+      <button class="modal__footer-button">Done</button>
+    <footer>
+  </div>
+  <div class="modal-bg js-modal-close" data-modal-id="modal-add-event"></div>
+</body>

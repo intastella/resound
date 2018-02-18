@@ -1,0 +1,32 @@
+{
+  "name": "resound",
+  "version": "0.0.1",
+  "description": "Events + Music",
+  "repository": "git",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "autoprefixer": "^7.1.2",
+    "breakpoint-sass": "2.7.1",
+    "element-closest": "^2.0.2",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-string-replace": "^0.4.0",
+    "gulp-uglify": "^3.0.0",
+    "lodash": "^4.17.4",
+    "merge-stream": "^1.0.1",
+    "postcss-discard-duplicates": "^2.1.0",
+    "postcss-focus": "^2.0.0",
+    "sanitize.css": "4.1.0",
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "vanilla-text-mask": "5.0.1",
+    "webpack": "^3.3.0",
+    "webpack-stream": "^4.0.0"
+  }
+}

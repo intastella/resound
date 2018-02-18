@@ -1,0 +1,27 @@
+html {
+  @include full-height;
+}
+
+body {
+  @include relative;
+  @include flex;
+  @include flex-vertical;
+  @include full-height;
+}
+
+html, 
+body {
+  &.scroll-lock {
+    @include overflow-hidden;
+    @include full-height;
+  }
+}
+
+.page-main {
+  @include flex-grow;
+  padding-top: $header-size-small;
+  
+  @include breakpoint($large) {
+    padding-top: $header-size-large;
+  }
+}

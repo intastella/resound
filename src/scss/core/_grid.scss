@@ -1,0 +1,93 @@
+@function element-width($column-index, $grid-columns, $grid-gutter, $grid-outer-margin) {
+	$not-rounded-value: ((100%/$grid-columns) * $column-index);
+  @return $not-rounded-value;
+}
+
+@mixin column-width($columns-width, $grid-columns, $grid-gutter, $grid-outer-margin, $display: null) {
+	width: element-width($columns-width, $grid-columns, $grid-gutter, $grid-outer-margin);
+	@if $display != null {
+		display: $display;
+	}
+}
+
+@mixin generate-column-classes($grid-columns, $screen-prefix, $grid-gutter, $grid-outer-margin) {
+	@for $i from 0 through $grid-columns {
+		@if $i == 0 {
+			.#{$screen-prefix}-#{$i} {
+				@include column-width($i, $grid-columns, $grid-gutter, $grid-outer-margin, none);
+			}
+		} @else {
+			.#{$screen-prefix}-#{$i} {
+				@include column-width($i, $grid-columns, $grid-gutter, $grid-outer-margin, block);
+			}
+		}
+	}
+}
+
+@mixin container-padding($pad-top: null, $pad-bottom: null) {
+  @if $pad-top != null and $pad-bottom != null {
+    @if $pad-top == $pad-bottom {
+      padding: $pad-top $grid-outer-margin-small;
+    } @else {
+      padding: $pad-top $grid-outer-margin-small $pad-bottom;
+    }
+  } @else {
+    padding-left: $grid-outer-margin-small;
+    padding-right: $grid-outer-margin-small;
+  }
+  
+  @include breakpoint($medium) {
+    padding-left: $grid-outer-margin-medium;
+    padding-right: $grid-outer-margin-medium;
+  }
+  
+  @include breakpoint($large) {
+    padding-left: $grid-outer-margin-large;
+    padding-right: $grid-outer-margin-large;
+  }
+}
+
+@mixin column-padding($pad-top: null, $pad-bottom: null) {
+  @if $pad-top != null {
+    padding-top: $pad-top;
+  }
+  
+  @if $pad-bottom != null {
+    padding-bottom: $pad-bottom;
+  }
+  
+  padding-left: $grid-gutter-small / 2;
+  padding-right: $grid-gutter-small / 2;
+  
+  @include breakpoint($medium) {
+    padding-left: $grid-gutter-medium / 2;
+    padding-right: $grid-gutter-medium / 2;
+  }
+  
+  @include breakpoint($large) {
+    padding-left: $grid-gutter-large / 2;
+    padding-right: $grid-gutter-large / 2;
+  }
+}
+
+@mixin grid-container {
+  @include full-width;
+	@include center;
+  @include clear;
+  @include container-padding;
+  max-width: $container-max-width;
+}
+
+@mixin grid-columns($screen-size, $column-width) {
+  @if $screen-size == 'small' or $screen-size == undefined {
+    @include column-width($column-width, $small-screen-columns, $grid-gutter-small, $grid-outer-margin-small);
+  }
+  
+  @if $screen-size == 'medium' {
+    @include column-width($column-width, $medium-screen-columns, $grid-gutter-medium, $grid-outer-margin-medium);
+  }
+  
+  @if $screen-size == 'large' {
+    @include column-width($column-width, $large-screen-columns, $grid-gutter-large, $grid-outer-margin-large);
+  }
+}

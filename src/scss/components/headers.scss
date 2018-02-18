@@ -1,0 +1,58 @@
+.page-header {
+	@include absolute;
+	@include flex;
+	@include flex-none;
+	@include flex-vertical;
+	@include full-width;
+  @include pad-left-small;
+  @include pad-right-small;
+	top: 0;
+	background-color: $page-header-bg-color;
+	z-index: 2;
+  
+  @include breakpoint($medium) {
+		padding-left: $gutter-quad;
+    padding-right: $gutter-quad;
+	}
+}
+
+.page-header__inner {
+  @include flex;
+  @include full-width;
+  @include full-height;
+  @include border-bottom;
+  height: $header-size-small;
+	justify-content: space-between;
+	align-items: center;
+  
+  @include breakpoint($medium) {
+		height: $header-size-large;
+	}
+}
+
+.page-header__logo {
+	@include relative;
+	background-image: url('#{$image-path}#{$logo}');
+  background-position: top left;
+  background-size: 100% 100%;
+  width: map-get($page-header-logo-small, width);
+  height: map-get($page-header-logo-small, height);
+	
+	@include breakpoint($medium) {
+    width: map-get($page-header-logo-large, width);
+    height: map-get($page-header-logo-large, height);
+    background-image: url('#{$image-path}#{$logo-large}');
+  }
+}
+
+.page-header__user {
+  @include round;
+  @include bordered;
+  width: 2em;
+  height: 2em;
+  
+  @include breakpoint($medium) {
+    width: 2.5em;
+    height: 2.5em;
+  }
+}

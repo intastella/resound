@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M18,10.5857864 L18,3 C18,2.44771525 17.5522847,2 17,2 L3,2 C2.44771525,2 2,2.44771525 2,3 L2,17 C2,17.4288091 2.26990055,17.7945795 2.64908837,17.9366981 L13.2928932,7.29289322 C13.6834175,6.90236893 14.3165825,6.90236893 14.7071068,7.29289322 L18,10.5857864 Z M18,13.4142136 L14,9.41421356 L5.41421356,18 L17,18 C17.5522847,18 18,17.5522847 18,17 L18,13.4142136 Z M3,0 L17,0 C18.6568542,-2.22044605e-16 20,1.34314575 20,3 L20,17 C20,18.6568542 18.6568542,20 17,20 L3,20 C1.34314575,20 2.22044605e-16,18.6568542 0,17 L0,3 C-2.22044605e-16,1.34314575 1.34314575,3.33066907e-16 3,0 Z M6.5,9 C5.11928813,9 4,7.88071187 4,6.5 C4,5.11928813 5.11928813,4 6.5,4 C7.88071187,4 9,5.11928813 9,6.5 C9,7.88071187 7.88071187,9 6.5,9 Z M6.5,7 C6.77614237,7 7,6.77614237 7,6.5 C7,6.22385763 6.77614237,6 6.5,6 C6.22385763,6 6,6.22385763 6,6.5 C6,6.77614237 6.22385763,7 6.5,7 Z" id="path-1"></path>
+    </defs>
+    <g id="Add-Event---Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-150.000000, -120.000000)">
+        <g id="image" transform="translate(120.000000, 90.000000)">
+            <g transform="translate(30.000000, 30.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Combined-Shape" fill="#E0DCDC" fill-rule="nonzero" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>
