@@ -2,7 +2,7 @@
   @include overflow-hidden;
   @include bg-color-white;
   border-radius: $border-radius-large;
-  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: $default-shadow;
 }
 
 .event-heading {
@@ -70,6 +70,8 @@
   }
   
   &--add {
+    @include type-color-primary;
+    
     &::before {
       @include content-on;
       @include block;

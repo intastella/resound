@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="7px" height="12px" viewBox="0 0 7 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Chevron</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Add-Event-Music-Searched---Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-272.000000, -292.000000)">
+        <g id="modal" transform="translate(20.000000, 150.000000)" fill="#5DCE7C">
+            <path d="M252.17043,148.4073 C251.94319,148.182159 251.94319,147.818425 252.17043,147.5927 L257.563583,142.244292 C257.891624,141.918569 258.425346,141.918569 258.753969,142.244292 C259.08201,142.570015 259.08201,143.098657 258.753969,143.42438 L254.140422,148.000292 L258.753969,152.575035 C259.08201,152.901343 259.08201,153.429985 258.753969,153.755708 C258.425346,154.081431 257.891624,154.081431 257.563583,153.755708 L252.17043,148.4073 Z" id="Chevron" transform="translate(255.500000, 148.000000) rotate(180.000000) translate(-255.500000, -148.000000) "></path>
+        </g>
+    </g>
+</svg>
