@@ -17461,7 +17461,7 @@ function rsMusicSearchArtists() {
           var rsArtistListTemplate = "";
           var i;
           for (i = 0; i < rsMusicSearchArtistsResultsDeDuped.length; i++) {
-            rsArtistListTemplate += "<li class='modal__music-overlay-search-results-list-item js-music-search-artist-link' data-artist-id='"+ rsMusicSearchArtistsResultsDeDuped[i].artistId + "'><div class='modal__music-overlay-search-results-list-item-label'>"+ rsMusicSearchArtistsResultsDeDuped[i].artistName + "</div><svg class='modal__music-overlay-search-results-list-item-arrow' width='7' height='12' viewBox='0 0 7 12' xmlns='http://www.w3.org/2000/svg'><path d='M6.83 5.593a.572.572 0 0 1 0 .814l-5.394 5.349a.847.847 0 0 1-1.19 0 .83.83 0 0 1 0-1.18L4.86 6 .246 1.425a.831.831 0 0 1 0-1.18.847.847 0 0 1 1.19 0L6.83 5.592z' fill='#5DCE7C' fill-rule='evenodd'/></svg></li>";
+            rsArtistListTemplate += "<li class='modal__music-overlay-search-results-list-item js-music-search-artist-link' data-artist-id='"+ rsMusicSearchArtistsResultsDeDuped[i].artistId + "'><div class='modal__music-overlay-search-results-list-item-label'>"+ rsMusicSearchArtistsResultsDeDuped[i].artistName + "</div><svg class='modal__music-overlay-search-results-list-item-arrow' width='7' height='12' viewBox='0 0 7 12' xmlns='http://www.w3.org/2000/svg'><path d='M6.83 5.593a.572.572 0 0 1 0 .814l-5.394 5.349a.847.847 0 0 1-1.19 0 .83.83 0 0 1 0-1.18L4.86 6 .246 1.425a.831.831 0 0 1 0-1.18.847.847 0 0 1 1.19 0L6.83 5.592z' fill-rule='evenodd'/></svg></li>";
           }
           rsMusicSearchResultsArtists.innerHTML = rsArtistListTemplate;
           rsMusicSearchMessage.classList.add('modal__music-overlay-search-message--off');

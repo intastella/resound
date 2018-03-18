@@ -465,4 +465,5 @@
 .modal__music-overlay-search-results-list-item-arrow {
   @include flex-fixed;
   @include gap-left-xsmall;
+  @include type-color-primary;
 }
