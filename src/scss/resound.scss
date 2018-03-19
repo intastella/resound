@@ -1,6 +1,7 @@
 @import 'acorn-css/src/css/core/_all-core';
 @import '_settings';
-@import 'base/_all-base';
-@import 'components/headers.scss';
-@import 'components/events.scss';
-@import 'components/modals.scss';
+@import 'acorn-css/src/css/base/_all-base';
+@import '_global';
+@import 'components/headers';
+@import 'components/events';
+@import 'components/modals';
