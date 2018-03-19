@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 
 gulp.task('watch', function() {
-  gulp.watch('./src/scss/**/*.scss', ['css']);
+  gulp.watch('./src/css/**/*.scss', ['css']);
   gulp.watch('./src/js/**/*.js', ['js']);
 });
 
@@ -16,7 +16,7 @@ var compileSass = function() {
   var sass = require('gulp-sass');
   var merge = require('merge-stream');
     
-  var resound = gulp.src('./src/scss/resound.scss')
+  var resound = gulp.src('./src/css/resound.scss')
     .pipe(sass({
       includePaths: [ 'node_modules/' ],
       outputStyle: 'expanded',
