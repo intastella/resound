@@ -120,6 +120,7 @@
 }
 
 .event__detail-name {
+  @include gap-bottom-zero;
   @include type-truncate;
   font-size: $type-12;
   
