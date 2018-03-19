@@ -1,5 +1,5 @@
 @mixin modal-input-style {
-  @include full-width;
+  @include width-full;
   @include gap-bottom-small;
   padding: $gutter 0;
   border-bottom: 1px solid #E0E0E0;
@@ -7,8 +7,8 @@
 
 .modal-bg {
   @include fixed;
-  @include full-width;
-  @include full-height;
+  @include width-full;
+  @include height-full;
   @include hidden;
   top: 0;
   left: 0;
@@ -25,8 +25,8 @@
   @include fixed;
   @include hidden;
   @include flex-vertical;
-  @include full-width;
-  @include full-height;
+  @include width-full;
+  @include height-full;
   top: 0;
   right: 0;
   transition: transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1.000);
@@ -63,7 +63,7 @@
 .modal__header {
   @include flex;
   @include flex-cross-center;
-  @include full-width;
+  @include width-full;
   height: $header-size-small;
   justify-content: space-between;
   background-image: linear-gradient(135deg, #5DBDCE 0%, #5DCE7C 100%);
@@ -201,7 +201,7 @@
 
 .modal__footer {
   @include fixed;
-  @include full-width;
+  @include width-full;
   @include bg-color-white;
   bottom: 0;
   left: 0;
@@ -215,7 +215,7 @@
 }
 
 .modal__footer-button {
-  @include full-width;
+  @include width-full;
   @include center;
   @include block;
   @include font-medium;
@@ -231,8 +231,8 @@
 
 .modal__music-overlay-bg {
   @include fixed;
-  @include full-width;
-  @include full-height;
+  @include width-full;
+  @include height-full;
   @include hidden;
   top: 0;
   left: 0;
@@ -297,7 +297,7 @@
 .modal__music-overlay-header-inner {
   @include flex;
   @include flex-cross-center;
-  @include full-width;
+  @include width-full;
   justify-content: space-between;
   border-bottom: 1px solid #E0E0E0;
   padding: 14px 0;
@@ -372,7 +372,7 @@
 .modal__music-overlay-search-input {
   @include gap-top-xsmall;
   @include flex-fixed;
-  @include full-width;
+  @include width-full;
   @include round;
   padding: 0.25em 1em;
   background: #F3F3F3;

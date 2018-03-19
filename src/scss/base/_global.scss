@@ -1,19 +1,19 @@
 html {
-  @include full-height;
+  @include height-full;
 }
 
 body {
   @include relative;
   @include flex;
   @include flex-vertical;
-  @include full-height;
+  @include height-full;
 }
 
 html, 
 body {
   &.scroll-lock {
     @include overflow-hidden;
-    @include full-height;
+    @include height-full;
   }
 }
 

@@ -3,7 +3,7 @@
 	@include flex;
 	@include flex-none;
 	@include flex-vertical;
-	@include full-width;
+	@include width-full;
   @include pad-left-small;
   @include pad-right-small;
 	top: 0;
@@ -18,8 +18,8 @@
 
 .page-header__inner {
   @include flex;
-  @include full-width;
-  @include full-height;
+  @include width-full;
+  @include height-full;
   @include border-bottom;
   height: $header-size-small;
 	justify-content: space-between;

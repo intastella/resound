@@ -5,6 +5,7 @@
   "repository": "git",
   "license": "UNLICENSED",
   "devDependencies": {
+    "acorn-css": "git://github.com/intastella/acorn-css.git",
     "autoprefixer": "^7.1.2",
     "breakpoint-sass": "2.7.1",
     "element-closest": "^2.0.2",
