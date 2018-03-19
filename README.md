@@ -15,15 +15,15 @@ Then SSH into the vagrant machine
 ```bash
     vagrant ssh
 ```
-Now you are inside the Vagrant machine.  Install Gulp with:
+Now you are inside the Vagrant machine.  Install the global tools with:
 ```bash
     sudo npm install gulp-cli -g
 ```
-Install the Gulp plugins with:
+Install the node modules with:
 ```bash
     npm install
 ```
-Then build Pug pages with Gulp by running:
+Then build everything with Gulp by running:
 ```bash
     gulp
 ```
