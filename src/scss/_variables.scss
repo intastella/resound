@@ -1,0 +1,16 @@
+$page-header-size-small: 3.75em; //60px
+$page-header-size-large: 4.375em; //70px
+
+$page-header-logo: 'logo-reduced-grey.svg';
+$page-header-logo-large: $page-header-logo;
+
+$page-header-logo-small: (
+  width: 147px,
+  height: 24px
+);
+$page-header-logo-large: (
+  width: 196px,
+  height: 32px
+);
+
+$default-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.15);

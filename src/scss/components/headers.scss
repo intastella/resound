@@ -7,7 +7,7 @@
   @include pad-left-small;
   @include pad-right-small;
 	top: 0;
-	background-color: $page-header-bg-color;
+	background-color: $white;
 	z-index: 2;
   
   @include breakpoint($medium) {
@@ -21,18 +21,18 @@
   @include width-full;
   @include height-full;
   @include border-bottom;
-  height: $header-size-small;
+  height: $page-header-size-small;
 	justify-content: space-between;
 	align-items: center;
   
   @include breakpoint($medium) {
-		height: $header-size-large;
+		height: $page-header-size-large;
 	}
 }
 
 .page-header__logo {
 	@include relative;
-	background-image: url('#{$image-path}#{$logo}');
+	background-image: url('#{$image-path}#{$page-header-logo}');
   background-position: top left;
   background-size: 100% 100%;
   width: map-get($page-header-logo-small, width);
@@ -41,7 +41,7 @@
 	@include breakpoint($medium) {
     width: map-get($page-header-logo-large, width);
     height: map-get($page-header-logo-large, height);
-    background-image: url('#{$image-path}#{$logo-large}');
+    background-image: url('#{$image-path}#{$page-header-logo}');
   }
 }
 

@@ -19,9 +19,9 @@ body {
 
 .page-main {
   @include flex-grow;
-  padding-top: $header-size-small;
+  padding-top: $page-header-size-small;
   
   @include breakpoint($large) {
-    padding-top: $header-size-large;
+    padding-top: $page-header-size-large;
   }
 }
